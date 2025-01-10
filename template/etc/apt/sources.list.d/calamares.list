@@ -1,1 +1,1 @@
-deb [trusted=yes] https://blissos.github.io/aaropa_devuan_repo unstable main
+deb [trusted=yes] https://github.com/Bliss-Bass/aaropa_devuan_repo unstable main
