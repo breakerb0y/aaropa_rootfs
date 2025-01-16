@@ -1,6 +1,8 @@
 name: Generate install.sfs & initrd_lib.tar.gz from Docker Image
 
 on:
+  schedule:
+    - cron: "0 0 15 * *"
   push:
     branches:
       - main
@@ -119,5 +121,30 @@ jobs:
         with:
           token: "${{ secrets.RELEASE_TOKEN }}"
           prerelease: false
+          files: |
+            ${{ steps.download-rootfs.outputs.download-path }}/*
+
+  monthly-release:
+    name: Monthly release
+    needs: build
+    if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download rootfs
+        id: download-rootfs
+        uses: actions/download-artifact@v4
+        with:
+          path: out
+          pattern: "*"
+          merge-multiple: true
+      - name: List Files
+        run: ls -R ${{ steps.download-rootfs.outputs.download-path }}
+    
+      - uses: "softprops/action-gh-release@v2.1.0"
+        with:
+          token: "${{ secrets.RELEASE_TOKEN }}"
+          prerelease: false
+          tag_name: "r${{ github.run_number }}"
+          name: "Monthly release r${{ github.run_number }}"
           files: |
             ${{ steps.download-rootfs.outputs.download-path }}/*

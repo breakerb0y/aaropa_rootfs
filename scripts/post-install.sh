@@ -1,7 +1,14 @@
 #!/bin/bash
 
+# Copy grub2 theme
+cp -r /usr/share/grub/themes /iso/boot/grub
+mkdir -p /boot/grub/themes /usr/share/grub/themes
+
 # Generate a grub-rescue iso so we can use it as the base for the iso
-grub-mkrescue -o /grub-rescue.iso /iso
+grub-mkrescue \
+  --themes="$(find /iso/boot/grub/themes -mindepth 1 -maxdepth 1 -type d -print -quit)" \
+  -o /grub-rescue.iso \
+  /iso
 rm -rf /iso
 
 # Generate initrd template
