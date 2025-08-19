@@ -5,16 +5,16 @@ COPY packages /
 COPY scripts /
 COPY iso /iso
 
-RUN apt update && apt upgrade -y
+RUN apt update && apt upgrade -y --allow-unauthenticated
 
 # Install additional apt utils 
-RUN apt install -y apt-transport-https ca-certificates
+RUN apt install -y apt-transport-https ca-certificates --allow-unauthenticated
 
 # Re-run apt update after install apt utils
-RUN apt update
+RUN apt update --allow-unauthenticated
 
 # Install package list
-RUN grep -Ev '^#' /pkglist.cfg | xargs apt install -y --no-install-recommends --no-install-suggests
+RUN grep -Ev '^#' /pkglist.cfg | xargs apt install -y --no-install-recommends --no-install-suggests --allow-unauthenticated
 
 RUN /post-install.sh
 
