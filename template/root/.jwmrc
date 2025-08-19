@@ -3,7 +3,7 @@
 
 	<!-- The root menu. -->
 	<RootMenu onroot="1" height="22">
-		<Program icon="/etc/bliss/blissos_logo.svg" label="Install BlissOS">bash -c /usr/bin/aaropa-calamares</Program>
+		<Program icon="/etc/bliss/genius_logo.svg" label="Install GpDroid">bash -c /usr/bin/aaropa-calamares</Program>
 		<Program icon="/etc/bliss/text-x-generic.svg" label="README">l3afpad /etc/bliss/readme.txt</Program>
 	<Separator/>
 		<Program icon="gparted.svg" label="GParted">gparted</Program>
@@ -24,7 +24,7 @@
 	<!-- Tray at the bottom. -->
 	<Tray x="0" y="-1" height="30" autohide="off" delay="1000">
 
-		<TrayButton icon="/etc/bliss/blissos_logo.svg" label="Menu">root:1</TrayButton>
+		<TrayButton icon="/etc/bliss/genius_logo.svg" label="Menu">root:1</TrayButton>
 		<Spacer width="4"/>
 
 		<Pager labeled="true"/>
@@ -45,56 +45,56 @@
 		<Width>4</Width>
 		<Height>28</Height>
 		<Corner>8</Corner>
-		<Foreground>#D1C3CB</Foreground>
-		<Background>#3E3E3E</Background>
-		<Outline>#4E444B</Outline>
+		<Foreground>#212121</Foreground>
+		<Background>#FFFFFF</Background>
+		<Outline>#444444</Outline>
 		<Opacity>0.5</Opacity>
 		<Active>
-			<Foreground>#EBDFE6</Foreground>
-			<Background>#212121</Background>
-			<Outline>#9A8D96</Outline>
+			<Foreground>#212121</Foreground>
+			<Background>#FFFFFF</Background>
+			<Outline>#999999</Outline>
 			<Opacity>1.0</Opacity>
 		</Active>
 	</WindowStyle>
 	<TrayStyle group="false" list="all">
 		<Font>Sans-10</Font>
-		<Foreground>#EBDFE6</Foreground>
-		<Background>#2E282D</Background>
-		<Outline>#2E282D</Outline>
+		<Foreground>#EEEEEE</Foreground>
+		<Background>#262aff</Background>
+		<Outline>#262aff</Outline>
 		<Opacity>0.75</Opacity>
 	</TrayStyle>
 	<PagerStyle>
 		<Corner>8</Corner>
-		<Foreground>#41283F</Foreground>
-		<Background>#3E373C</Background>
-		<Text>#E9C6F0</Text>
+		<Foreground>#EEEEEE</Foreground>
+		<Background>#262aff</Background>
+		<Text>#EEEEEE</Text>
 		<Active>
-			<Foreground>#5D415A</Foreground>
-			<Background>#4F434C</Background>
+			<Foreground>#EEEEEE</Foreground>
+			<Background>#262aff</Background>
 		</Active>
 	</PagerStyle>
 	<MenuStyle>
 		<Font>Sans-10</Font>
-		<Foreground>#EBDFE6</Foreground>
-		<Background>#2E282D</Background>
-		<Outline>#9A8D96</Outline>
+		<Foreground>#EEEEEE</Foreground>
+		<Background>#262aff</Background>
+		<Outline>#EEEEEE</Outline>
 		<Corner>16</Corner>
 		<Active>
-			<Foreground>#FFD1F7</Foreground>
-			<Background>#5D415A</Background>
+			<Foreground>#EEEEEE</Foreground>
+			<Background>#262aff</Background>
 		</Active>
 		<Opacity>0.85</Opacity>
 	</MenuStyle>
 	<PopupStyle>
 		<Font>Sans-10</Font>
-		<Foreground>#EBDFE6</Foreground>
-		<Background>#212121</Background>
-		<Outline>#9A8D96</Outline>
+		<Foreground>#212121</Foreground>
+		<Background>#FFFFFF</Background>
+		<Outline>#999999</Outline>
 	</PopupStyle>
 	<TaskListStyle>
 			<Active>
-			<Foreground>#FFFFFF</Foreground>
-				<Background>#72556E</Background>
+			<Foreground>#212121</Foreground>
+				<Background>#FFFFFF</Background>
 		</Active>
 	</TaskListStyle>
 
@@ -161,7 +161,7 @@
 				contained within a Desktop tag to give a specific background
 				for that desktop.
 		-->
-		<Background type="scale">/usr/share/backgrounds/blissified_09.png</Background>
+		<Background type="scale">/usr/share/backgrounds/genius_09.png</Background>
 	</Desktops>
 
 	<!-- Double click speed (in milliseconds) -->

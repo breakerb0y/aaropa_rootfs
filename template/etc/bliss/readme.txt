@@ -1,4 +1,4 @@
-Welcome to the new BlissOS installation environment! This environment is built on a minimal Devuan ceres setup and includes several essential programs:
+Welcome to the new GP Droid installation environment! This environment is built on a minimal Devuan ceres setup and includes several essential programs:
 
 - GParted – Partition manager
 - GPicView – Photo viewer
@@ -8,8 +8,3 @@ Welcome to the new BlissOS installation environment! This environment is built o
 - PCManFM – File manager
 - QTerminal – Terminal emulator
 - JWM – Window manager
-
-The installation process is powered by the Calamares installer. Before you begin, we recommend reviewing the tutorial in our documentation at https://docs.blissos.org.
-
-With appreciation,
-BlissLabs & Contributors
