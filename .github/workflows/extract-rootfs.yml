@@ -109,7 +109,7 @@ jobs:
     steps:
       - name: Download RootFS
         id: download-rootfs
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           path: out
           pattern: "*"
@@ -133,7 +133,7 @@ jobs:
     steps:
       - name: Download rootfs
         id: download-rootfs
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           path: out
           pattern: "*"
