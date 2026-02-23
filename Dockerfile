@@ -11,7 +11,7 @@ RUN apt update && apt upgrade -y
 RUN apt install -y apt-transport-https ca-certificates
 
 # Re-run apt update after install apt utils
-RUN apt update --allow-unauthenticated
+RUN apt update
 
 # Install package list
 RUN grep -Ev '^#' /pkglist.cfg | xargs apt install -y --no-install-recommends --no-install-suggests
@@ -25,4 +25,5 @@ RUN rm /*.cfg
 
 RUN /post-setup.sh
 RUN rm /*.sh
+
 
